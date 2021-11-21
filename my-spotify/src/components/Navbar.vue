@@ -11,23 +11,42 @@
         />
       </div>
       <!-- Main Buttons -->
-      <div class="main-button mx-2 mb-2">
+      <div class="mx-2 mb-2">
         <router-link
           v-for="button in mainbuttons"
           :key="button.text"
           :to="button.path"
-          class="w-full rounded px-3 py-2 flex items-start justify-start"
+          class="w-full rounded px-3 py-2 flex items-start justify-start text-gray-300 hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 mr-3 text-gray-300"
+            class="h-6 w-6 mr-3"
             viewBox="0 0 20 20"
             fill="currentColor"
             v-html="button.icon"
           ></svg>
-          <p class="bg text-gray-300">{{ button.text }}</p>
+          <p>{{ button.text }}</p>
         </router-link>
       </div>
+      <!-- Create List -->
+      <div class="mx-2 mt-5">
+        <router-link
+          v-for="button in createlist"
+          :key="button.text"
+          :to="button.path"
+          class="w-full rounded px-3 py-2 flex items-start justify-star text-gray-300 hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 mr-3"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            v-html="button.icon"
+          ></svg>
+          <p>{{ button.text }}</p>
+        </router-link>
+      </div>
+      <hr class="mx-2 my-2 border-gray-700">
     </aside>
   </div>
 </template>
@@ -54,6 +73,18 @@ export default {
           path: "library",
         },
       ],
+      createlist: [
+        {
+          text: "Create Playlist",
+          icon: '<path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>',
+          path: "library",
+        },
+        {
+          text: "Liked Songs",
+          icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />',
+          path: "library",
+        },
+      ]
     };
   },
 };

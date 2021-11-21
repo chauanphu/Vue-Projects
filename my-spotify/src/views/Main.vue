@@ -1,12 +1,19 @@
 <template>
-  <main class="w-full h-full bg-blue-400 relative">
+  <div class="w-full h-full bg-blue-400 relative">
     <!-- Header -->
-    <div class="w-full sticky top-0 bg-yellow-300 p-2"></div>
-  </main>
+    <Header class="w-full sticky top-0 p-4"></Header>
+    <main>
+      
+    </main>
+  </div>
 </template>
 
 <script>
-export default {};
+import Header from "@/components/Header";
+
+export default {
+  components: { Header },
+};
 </script>
 
 <style></style>
