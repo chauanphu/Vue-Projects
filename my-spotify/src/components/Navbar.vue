@@ -12,10 +12,10 @@
       </div>
       <!-- Main Buttons -->
       <div class="main-button mx-2 mb-2">
-        <button
+        <router-link
           v-for="button in mainbuttons"
           :key="button.text"
-          href="#"
+          :to="button.path"
           class="w-full rounded px-3 py-2 flex items-start justify-start"
         >
           <svg
@@ -26,7 +26,7 @@
             v-html="button.icon"
           ></svg>
           <p class="bg text-gray-300">{{ button.text }}</p>
-        </button>
+        </router-link>
       </div>
     </aside>
   </div>
@@ -41,14 +41,17 @@ export default {
         {
           text: "Home",
           icon: '<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>',
+          path: "/",
         },
         {
           text: "Search",
           icon: '<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />',
+          path: "search",
         },
         {
           text: "Library",
           icon: '<path d="M2 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4zM8 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H9a1 1 0 01-1-1V4zM15 3a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1h-2z" />',
+          path: "library",
         },
       ],
     };
@@ -56,5 +59,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.router-link-exact-active {
+  background-color: #282828;
+}
 </style>
