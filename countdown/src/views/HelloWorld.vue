@@ -9,7 +9,7 @@ import Counter from "../components/Counter";
 export default {
   name: "hello-world",
   components: {
-    Counter,
+    Counter
   },
 };
 </script>
