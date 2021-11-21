@@ -1,5 +1,4 @@
 <template>
-  <!-- Main Content -->
   <main class="w-full h-full bg-blue-400 relative">
     <!-- Header -->
     <div class="w-full sticky top-0 bg-yellow-300 p-2"></div>
@@ -7,9 +6,7 @@
 </template>
 
 <script>
-export default {
-  name: "main-content",
-};
+export default {};
 </script>
 
 <style></style>
