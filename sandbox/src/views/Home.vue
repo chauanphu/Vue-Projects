@@ -2,7 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Modal />
+    <Modal ref="modal">
+
+    </Modal>
+    <button class="p-5 mt-3 text-green-700 hover:shadow-md" @click="$refs.modal.open()">Open Modal</button>
   </div>
 </template>
 
