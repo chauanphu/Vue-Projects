@@ -2,23 +2,20 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Modal />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import Modal from "@/components/Modal.vue";
 
 export default {
   name: "Home",
   components: {
     HelloWorld,
-  },
-  mounted() {
-    fetch("http://localhost:3000/jobs")
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+    Modal,
   },
 };
 </script>
