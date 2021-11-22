@@ -45,7 +45,7 @@ export default {
   name: "Modal",
   data() {
     return {
-      isOpen: true,
+      isOpen: false,
     };
   },
   methods: {
